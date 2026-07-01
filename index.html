@@ -1,192 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com/3.4.1"></script> <!-- Using Tailwind CSS v3.4.1 as v4.1 is not yet released -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <style>
-        /* CSS for scroll-reveal animation */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(30px); /* Start slightly lower */
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orchivillando Studio | Premium Indie Game Studio</title>
+  <meta name="description" content="Orchivillando Studio is an independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools.">
+  <meta name="keywords" content="Orchivillando Studio, indie game studio, browser games, HTML5 games, Godot, CrazyGames, AI game development, Stack Precision">
+  <meta name="author" content="Orchivillando Studio">
+  <meta name="theme-color" content="#050816">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orchivillando.github.io/">
+  <meta property="og:title" content="Orchivillando Studio">
+  <meta property="og:description" content="Creating games that people love to play.">
+  <meta property="og:image" content="https://orchivillando.github.io/assets/brand/github-social-preview.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Orchivillando Studio">
+  <meta name="twitter:description" content="Premium indie game studio building polished browser games, mobile experiences, and AI-powered tools.">
+  <meta name="twitter:image" content="https://orchivillando.github.io/assets/brand/github-social-preview.svg">
+  <link rel="canonical" href="https://orchivillando.github.io/">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/app-icon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Orchivillando Studio",
+    "url": "https://orchivillando.github.io/",
+    "logo": "https://orchivillando.github.io/assets/brand/logo-dark.svg",
+    "sameAs": ["https://github.com/orchivillando"],
+    "description": "An independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools."
+  }
+  </script>
 </head>
 <body>
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50"> <!-- Fixed navigation bar -->
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-center items-center"> <!-- Centered navigation items -->
-                <ul class="flex space-x-4">
-                    <li><a href="#hero" class="py-4 px-3 inline-block text-gray-700 hover:text-blue-500 font-medium">Home</a></li>
-                    <li><a href="#about" class="py-4 px-3 inline-block text-gray-700 hover:text-blue-500 font-medium">About</a></li>
-                    <li><a href="#projects" class="py-4 px-3 inline-block text-gray-700 hover:text-blue-500 font-medium">Projects</a></li>
-                    <li><a href="#contact" class="py-4 px-3 inline-block text-gray-700 hover:text-blue-500 font-medium">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="page-fade" aria-hidden="true"></div>
+
+  <header class="site-header" data-reveal>
+    <a class="brand" href="#hero" aria-label="Orchivillando Studio home">
+      <img src="assets/brand/logo-dark.svg" alt="" width="210" height="52">
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#games">Games</a>
+      <a href="#technology">Technology</a>
+      <a href="#press">Press</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <a class="header-cta" href="#games">Play</a>
+  </header>
 
-    <header class="bg-slate-100 pt-16"> <!-- Added padding-top to header to offset fixed nav -->
-        <section id="hero" class="min-h-[calc(75vh-4rem)] flex flex-col justify-center items-center text-center fade-in-section px-4"> <!-- Adjusted min-height, added reveal class, added padding for smaller screens -->
-            <img src="https://avatars.githubusercontent.com/u/141236550?v=4" alt="Grizenzio Orchivillando profile photo" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full mb-6 shadow-lg border-4 border-white"> <!-- Profile image -->
-            <h1 class="text-4xl font-bold text-gray-800 mb-4">Grizenzio Orchivillando</h1> <!-- Name, styled -->
-            <p class="text-xl text-gray-600 mb-8">Software Engineer</p> <!-- Title, styled -->
-            <a href="#projects" id="cta-view-projects" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> <!-- CTA button, styled, added ID -->
-                View Projects
-            </a>
-        </section>
-    </header>
-    <main>
-        <section id="about" class="py-16 fade-in-section"> <!-- Section padding, added reveal class -->
-            <!-- About Me content goes here -->
-            <div class="max-w-2xl mx-auto px-4"> <!-- Centered content block with padding -->
-                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">About Me</h2> <!-- Styled section header -->
-                <p class="text-lg text-gray-700 text-center"> <!-- Styled paragraph -->
-                    I am a passionate and dedicated software engineer with experience in developing innovative and efficient solutions. My journey in technology has been driven by a constant desire to learn and create impactful applications.
-                </p>
-            </div>
-        </section>
-        <section id="projects" class="py-16 bg-slate-50 fade-in-section"> <!-- Section padding and light background, added reveal class -->
-            <div class="max-w-6xl mx-auto px-4"> <!-- Centered content container with padding -->
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">My Projects</h2> <!-- Section header -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <!-- Responsive grid -->
-                    <!-- Project Card 1 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center"> <!-- Added flex-grow and items-center / text-center for icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">Festival Transformasi Pendidikan (2024)</h3> <!-- Adjusted mt-0 for icon spacing -->
-                            <p class="text-gray-600 text-sm flex-grow">An efficient registering system for participants, judges, and admins with automatic certificate generation for a paperless event.</p> <!-- Added flex-grow to description -->
-                        </div>
-                    </div>
-                    <!-- Project Card 2 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 0A11.953 11.953 0 0112 2.625a11.953 11.953 0 018.402 3.325" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">Disiplin AI (2025)</h3>
-                            <p class="text-gray-600 text-sm flex-grow">An employee discipline tracking app with WhatsApp login and QR scanning for attendance and violations, and report generation.</p>
-                        </div>
-                    </div>
-                    <!-- Project Card 3 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10.5 11.25h3M12 15V7.5M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">Perkap AI (2025)</h3>
-                            <p class="text-gray-600 text-sm flex-grow">Optimize assets with easier, more accurate, and efficient management, including features like QR code generation and real-time inventory tracking.</p>
-                        </div>
-                    </div>
-                    <!-- Project Card 4 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.536A11.247 11.247 0 0112 21c-2.774 0-5.297-.903-7.259-2.438m14.518-10.124A11.225 11.225 0 0012 2.25C6.477 2.25 2.25 6.477 2.25 12c0 1.91.532 3.704 1.459 5.211M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /> <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25V12m0 3.75h.008v.008H12v-.008zm0-6.75h.008v.008H12V8.25z" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">ULT AI (2025)</h3>
-                            <p class="text-gray-600 text-sm flex-grow">Integrated Service Unit platform for issue reports, consultations, facilitation, and information sharing with WhatsApp notifications and reporting.</p>
-                        </div>
-                    </div>
-                    <!-- Project Card 5 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.154 2.74 4.5 3.616 4.5 4.5v15c0 .884.654 1.76 1.907 1.978 1.735.213 3.701.322 5.593.322s3.858-.11 5.593-.322c1.253-.218 1.907-1.094 1.907-1.978V4.5c0-.884-.654-1.76-1.907-1.978C15.758 2.36 13.892 2.25 12 2.25z" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">Tunjangan (2025)</h3>
-                            <p class="text-gray-600 text-sm flex-grow">Allowance application for attendance, performance/meal allowances, and Excel reports, simplifying payroll and HR processes.</p>
-                        </div>
-                    </div>
-                    <!-- Project Card 6 -->
-                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex flex-col">
-                        <div class="w-full h-48 bg-gray-300 rounded-t-xl flex items-center justify-center text-gray-500">Project Image</div>
-                        <div class="p-6 flex flex-col flex-grow items-center text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-blue-500 mb-4"> <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /> <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /> </svg>
-                            <h3 class="text-xl font-semibold mt-0 mb-2 text-blue-600">Sekolah (2025)</h3>
-                            <p class="text-gray-600 text-sm flex-grow">School mapping system for Central Java, supporting training analysis and resource allocation for educational development.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="py-16 bg-white fade-in-section"> <!-- Section padding and background, added reveal class -->
-            <div class="max-w-xl mx-auto px-4"> <!-- Form container -->
-                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Get in Touch</h2> <!-- Section header -->
-                <form action="#" method="POST" class="space-y-6"> <!-- Form element with spacing -->
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                        <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Your Name">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                        <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="you@example.com">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" placeholder="Your message..."></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-gray-800 text-white text-center p-4"> <!-- Styled footer -->
-        <p>&copy; 2024 Grizenzio Orchivillando</p>
-    </footer>
+  <main id="main">
+    <section class="hero section" id="hero">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="mesh mesh-one" aria-hidden="true"></div>
+      <div class="mesh mesh-two" aria-hidden="true"></div>
+      <div class="float-shape shape-a" aria-hidden="true"></div>
+      <div class="float-shape shape-b" aria-hidden="true"></div>
+      <div class="float-shape shape-c" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy" data-reveal>
+          <h1>Creating Games That People Love To Play.</h1>
+          <p>An independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools.</p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="btn primary" href="#games">Play Our Games</a>
+            <a class="btn" href="#about">Our Story</a>
+            <a class="btn ghost" href="https://github.com/orchivillando" rel="noopener">GitHub</a>
+            <a class="btn ghost" href="#contact">CrazyGames</a>
+          </div>
+        </div>
+        <div class="hero-stage" data-reveal>
+          <div class="orbital-card" data-parallax>
+            <img src="assets/brand/stack-precision-poster.svg" alt="Stack Precision game artwork" width="540" height="560" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script>
-        // jQuery Document Ready
-        $(document).ready(function(){
-            // Smooth scrolling for navigation links and CTA button
-            $("nav a[href^='#'], #cta-view-projects").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    var navOffset = $('nav').outerHeight() || 0; // Get navigation height
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top - navOffset // Adjust scroll position for fixed nav
-                    }, 800, function(){
-                        // Optional: Add hash to URL after scroll
-                        // window.location.hash = hash;
-                    });
-                }
-            });
+    <section class="section about" id="about">
+      <div class="section-heading" data-reveal>
+        <h2>Small Studio. High Finish.</h2>
+        <p>Orchivillando Studio builds focused games with clean mechanics, fast iteration, and production polish from day one.</p>
+      </div>
+      <div class="about-layout">
+        <article class="story-panel" data-reveal>
+          <h3>Studio Story</h3>
+          <p>We are shaping a modern indie studio from Southeast Asia: compact, technical, design-led, and relentlessly practical. Every release starts with a simple loop, then earns its visuals, feel, sound, and launch plan.</p>
+        </article>
+        <div class="value-grid">
+          <article data-reveal><span>01</span><h3>Player First</h3><p>Every screen, input, and animation must make the game easier to love.</p></article>
+          <article data-reveal><span>02</span><h3>Polish Early</h3><p>Feel is not saved for the end. It guides what stays and what gets cut.</p></article>
+          <article data-reveal><span>03</span><h3>Automation</h3><p>AI-assisted workflows, testing, and publishing keep the studio fast.</p></article>
+        </div>
+      </div>
+    </section>
 
-            // Scroll-reveal animation for sections
-            function revealSections() {
-                var windowHeight = $(window).height();
-                var navHeight = $('nav').outerHeight() || 0;
-                var scrollPosition = $(window).scrollTop();
+    <section class="section games" id="games">
+      <div class="section-heading wide" data-reveal>
+        <h2>Games</h2>
+        <p>Current releases and experiments from the Orchivillando pipeline.</p>
+      </div>
+      <div class="game-grid">
+        <article class="game-card featured" data-reveal>
+          <img src="assets/brand/stack-precision-poster.svg" alt="Stack Precision preview" width="480" height="360" loading="lazy">
+          <div>
+            <p class="status live">Submitted to CrazyGames Basic Launch</p>
+            <h3>Stack Precision</h3>
+            <p>A crisp precision-stacking browser game built for quick sessions, satisfying timing, and clean replay value.</p>
+            <a class="text-link" href="#contact">Launch details</a>
+          </div>
+        </article>
+        <article class="game-card placeholder" data-reveal><div class="placeholder-art"></div><p class="status">In concept</p><h3>Future Game 02</h3><p>Prototype slot reserved for the next polished arcade experiment.</p></article>
+        <article class="game-card placeholder" data-reveal><div class="placeholder-art alt"></div><p class="status">Research</p><h3>AI Tooling Lab</h3><p>Internal tools for faster design, QA, content, and publishing loops.</p></article>
+      </div>
+    </section>
 
-                $('.fade-in-section').each(function() {
-                    var $this = $(this); // Cache jQuery object
-                    var sectionTop = $this.offset().top;
+    <section class="section technology" id="technology">
+      <div class="section-heading" data-reveal><h2>Technology</h2><p>A practical stack for fast prototypes, web launches, and repeatable publishing.</p></div>
+      <div class="tech-orbit" data-reveal>
+        <div class="tech-core">Orchivillando<br>Pipeline</div>
+        <ul>
+          <li>Godot</li><li>HTML5</li><li>CrazyGames SDK</li><li>GitHub</li><li>AI-assisted Development</li><li>Automation Pipeline</li>
+        </ul>
+      </div>
+    </section>
 
-                    // Check if the section is within the viewport, considering nav height and an offset
-                    // The offset (e.g., 100 or 150) makes the animation trigger a bit before the section is fully in view
-                    if (scrollPosition + windowHeight - navHeight > sectionTop + 100) {
-                        $this.addClass('is-visible');
-                    }
-                });
-            }
+    <section class="section process" id="process">
+      <div class="section-heading wide" data-reveal><h2>Development Process</h2><p>Simple stages, visible quality gates, and fast feedback.</p></div>
+      <ol class="process-flow">
+        <li data-reveal><span>Research</span></li><li data-reveal><span>Prototype</span></li><li data-reveal><span>Production</span></li><li data-reveal><span>QA</span></li><li data-reveal><span>Release</span></li><li data-reveal><span>Analytics</span></li><li data-reveal><span>Iteration</span></li>
+      </ol>
+    </section>
 
-            // Initial check on page load to reveal any sections already in view
-            revealSections();
+    <section class="section stats" aria-label="Studio stats">
+      <div class="stat-grid">
+        <div class="stat" data-counter="1" data-suffix="+"><strong>0</strong><span>Games Created</span></div>
+        <div class="stat" data-counter="0"><strong>0</strong><span>Games Released</span></div>
+        <div class="stat" data-counter="0"><strong>0</strong><span>Players</span></div>
+        <div class="stat" data-counter="240" data-suffix="+"><strong>0</strong><span>Hours of Development</span></div>
+        <div class="stat" data-counter="100" data-suffix="+"><strong>0</strong><span>Commits</span></div>
+        <div class="stat" data-counter="999" data-suffix="+"><strong>0</strong><span>Coffee Consumed</span></div>
+      </div>
+    </section>
 
-            // Check on scroll to reveal sections as they come into view
-            $(window).on('scroll', function() {
-                revealSections();
-            });
-        });
-    </script>
+    <section class="section vision" id="vision">
+      <div class="vision-copy" data-reveal><h2>Our Vision</h2><p>We are building one of the best AI-assisted indie game studios in Southeast Asia: a studio where taste, tooling, and execution compound into games people return to.</p></div>
+      <div class="timeline" id="timeline" data-reveal>
+        <div><time>2026</time><span>Stack Precision launch path</span></div>
+        <div><time>Next</time><span>Release cadence and browser-game portfolio</span></div>
+        <div><time>Future</time><span>Mobile experiences and AI-powered studio tools</span></div>
+      </div>
+    </section>
+
+    <section class="section editorial" id="blog">
+      <div class="section-heading wide" data-reveal><h2>Blog</h2><p>Launch notes, production breakdowns, and studio updates will live here.</p></div>
+      <article class="notice" data-reveal><h3>Coming Soon</h3><p>Postmortems, devlogs, technical notes, and behind-the-scenes production stories.</p></article>
+    </section>
+
+    <section class="section press" id="press">
+      <div class="section-heading wide" data-reveal><h2>Press Kit</h2><p>Downloadable starter assets for media, listings, stores, and partners.</p></div>
+      <div class="press-grid">
+        <a href="assets/press-kit/logos/orchivillando-logo-light.svg" download data-reveal>Logos</a>
+        <a href="assets/press-kit/screenshots/stack-precision-placeholder.svg" download data-reveal>Screenshots</a>
+        <a href="assets/press-kit/icons/app-icon.svg" download data-reveal>Icons</a>
+        <a href="docs/BrandGuide.md" download data-reveal>Brand Guide</a>
+        <a href="mailto:hello@orchivillando.studio" data-reveal>Media Contact</a>
+      </div>
+    </section>
+
+    <section class="section careers" id="careers">
+      <div class="section-heading" data-reveal><h2>Careers</h2><p>Open roles are not active yet. Future collaborators: game designers, web engineers, technical artists, QA, and publishing partners.</p></div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-panel" data-reveal>
+        <h2>Contact</h2>
+        <p>For publishing, press, partnership, or game platform inquiries.</p>
+        <div class="contact-links">
+          <a href="https://github.com/orchivillando" rel="noopener">GitHub</a>
+          <a href="mailto:hello@orchivillando.studio">Email</a>
+          <a href="#" aria-disabled="true">CrazyGames profile placeholder</a>
+          <a href="#" aria-disabled="true">Social placeholders</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/brand/logo-dark.svg" alt="Orchivillando Studio" width="190" height="48" loading="lazy">
+    <p>Independent game studio. Built in Southeast Asia. Designed for players everywhere.</p>
+    <nav aria-label="Footer navigation">
+      <a href="#games">Games</a><a href="#press">Press Kit</a><a href="#contact">Contact</a><a href="https://github.com/orchivillando" rel="noopener">GitHub</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

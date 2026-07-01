@@ -1,0 +1,17 @@
+{
+  "name": "Orchivillando Studio",
+  "short_name": "Orchivillando",
+  "description": "Premium indie game studio crafting polished browser games, mobile experiences, and AI-powered tools.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [
+    {
+      "src": "assets/brand/app-icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
