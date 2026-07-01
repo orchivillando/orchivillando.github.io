@@ -1,4 +1,5 @@
 document.documentElement.classList.add('js');
+setTimeout(() => document.documentElement.classList.add('motion-ready'), 6000);
 
 const glow = document.querySelector('.cursor-glow');
 
