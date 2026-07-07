@@ -1,202 +1,759 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Orchivillando Studio | Premium Indie Game Studio</title>
-  <meta name="description" content="Orchivillando Studio is an independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools.">
-  <meta name="keywords" content="Orchivillando Studio, indie game studio, browser games, HTML5 games, Godot, CrazyGames, AI game development, Stack Precision">
-  <meta name="author" content="Orchivillando Studio">
-  <meta name="theme-color" content="#050816">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://orchivillando.github.io/">
-  <meta property="og:title" content="Orchivillando Studio">
-  <meta property="og:description" content="Creating games that people love to play.">
-  <meta property="og:image" content="https://orchivillando.github.io/assets/brand/github-social-preview.svg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Orchivillando Studio">
-  <meta name="twitter:description" content="Premium indie game studio building polished browser games, mobile experiences, and AI-powered tools.">
-  <meta name="twitter:image" content="https://orchivillando.github.io/assets/brand/github-social-preview.svg">
-  <link rel="canonical" href="https://orchivillando.github.io/">
-  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/brand/app-icon.svg">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="preload" href="assets/css/styles.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Orchivillando Studio",
-    "url": "https://orchivillando.github.io/",
-    "logo": "https://orchivillando.github.io/assets/brand/logo-dark.svg",
-    "sameAs": ["https://github.com/orchivillando"],
-    "description": "An independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools."
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="cursor-glow" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grizenzio Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="favicon/favicon-96x96.png"
+    />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+      * {
+        font-family: "Geist", sans-serif;
+      }
 
-  <header class="site-header">
-    <a class="brand" href="#hero" aria-label="Orchivillando Studio home">
-      <img src="assets/brand/logo-dark.svg" alt="" width="210" height="52">
-    </a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#games">Games</a>
-      <a href="#technology">Technology</a>
-      <a href="#press">Press</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="header-cta" href="#games">Play</a>
-  </header>
+      @keyframes heroSlide {
+        0%,
+        30% {
+          background-image: url("hero.png");
+        }
+        33%,
+        63% {
+          background-image: url("hero_two.png");
+        }
+        66%,
+        96% {
+          background-image: url("hero_three.png");
+        }
+        100% {
+          background-image: url("hero.png");
+        }
+      }
 
-  <main id="main">
-    <section class="hero section" id="hero">
-      <div class="aurora" aria-hidden="true"></div>
-      <div class="mesh mesh-one" aria-hidden="true"></div>
-      <div class="mesh mesh-two" aria-hidden="true"></div>
-      <div class="float-shape shape-a" aria-hidden="true"></div>
-      <div class="float-shape shape-b" aria-hidden="true"></div>
-      <div class="float-shape shape-c" aria-hidden="true"></div>
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>Creating Games That People Love To Play.</h1>
-          <p>An independent game studio crafting polished browser games, mobile experiences, and AI-powered game development tools.</p>
-          <div class="hero-actions" aria-label="Hero actions">
-            <a class="btn primary" href="#games">Play Our Games</a>
-            <a class="btn" href="#about">Our Story</a>
-            <a class="btn ghost" href="https://github.com/orchivillando" rel="noopener">GitHub</a>
-            <a class="btn ghost" href="#contact">CrazyGames</a>
+      .hero-bg {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: heroSlide 9s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="hero-bg flex flex-col items-center px-10 md:px-20 pt-6 min-h-screen justify-between"
+    >
+      <nav
+        class="flex items-center justify-between bg-[#4E9EFF] border border-white/40 rounded-full pl-4 md:pl-6 pr-3 md:pr-2 py-1.5 w-full max-w-3xl mx-auto"
+      >
+        <a
+          href="#"
+          class="flex items-center gap-2 text-white font-semibold text-lg tracking-tight"
+        >
+          <img
+            src="icon.png"
+            alt="Grizenzio logo"
+            class="size-8 rounded-full object-cover"
+          />
+          Grizenzio
+        </a>
+        <div
+          id="menu"
+          class="max-md:absolute max-md:bg-black/50 max-md:h-[785px] max-md:overflow-hidden max-md:transition-[width] max-md:duration-300 max-md:top-0 max-md:left-0 max-md:flex-col max-md:justify-center max-md:backdrop-blur flex items-center gap-8 z-50 md:gap-6 md:absolute md:left-1/2 md:-translate-x-1/2 max-md:w-0"
+        >
+          <a href="#" class="text-gray-50 hover:text-white text-sm">Home</a>
+          <a href="#" class="text-gray-50 hover:text-white text-sm">About</a>
+          <a href="#" class="text-gray-50 hover:text-white text-sm">Projects</a>
+          <a href="#" class="text-gray-50 hover:text-white text-sm">Contact</a>
+
+          <button
+            id="close-menu"
+            class="md:hidden bg-zinc-950 text-white p-2 rounded-md aspect-square font-medium transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button
+            class="hidden md:inline-block bg-white hover:bg-white/90 text-zinc-600 px-6 py-3 rounded-full text-sm transition cursor-pointer"
+          >
+            Hire Me
+          </button>
+          <button
+            id="open-menu"
+            class="md:hidden bg-white text-zinc-800 p-1.5 rounded-md aspect-square font-medium transition"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4 12h16" />
+              <path d="M4 18h16" />
+              <path d="M4 6h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <h1
+        class="text-5xl md:text-[62px]/18 text-white text-center max-w-[620px] mt-auto mb-4 leading-tight font-medium tracking-tighter"
+      >
+        Hi, I'm Grizenzio Orchivillando
+      </h1>
+      <p
+        class="text-sm md:text-base/6.5 text-white text-center max-w-[420px] mt-2"
+      >
+        I build applications integrated with AI — turning complex ideas into
+        smart, seamless digital experiences.
+      </p>
+
+      <div class="flex gap-4 mt-8 mb-16">
+        <button
+          class="border border-white hover:bg-sky-200/30 text-white text-sm px-6 py-3 rounded-full tracking-tight transition cursor-pointer"
+        >
+          View My Work
+        </button>
+        <button
+          class="bg-white hover:bg-white/90 text-sm text-zinc-600 px-5 py-3 rounded-full tracking-tight transition cursor-pointer"
+        >
+          Contact Me
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-6">
+      <h2 class="text-3xl font-semibold text-center mx-auto">Featured Work</h2>
+      <p class="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">
+        Selected projects I have built, combining AI technology with intuitive
+        user experiences.
+      </p>
+      <div
+        class="flex flex-wrap items-center justify-center mt-10 mx-auto gap-4"
+      >
+        <img
+          class="max-w-56 h-80 object-cover rounded-lg hover:-translate-y-1 transition-all duration-300"
+          src="work/pawarta.jpg"
+          alt="project"
+        />
+        <img
+          class="max-w-56 h-80 object-cover rounded-lg hover:-translate-y-1 transition-all duration-300"
+          src="work/disiplin.jpg"
+          alt="project"
+        />
+        <img
+          class="max-w-56 h-80 object-cover rounded-lg hover:-translate-y-1 transition-all duration-300"
+          src="work/timlo.jpg"
+          alt="project"
+        />
+        <img
+          class="max-w-56 h-80 object-cover rounded-lg hover:-translate-y-1 transition-all duration-300"
+          src="work/pks.jpg"
+          alt="project"
+        />
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="w-full flex-col items-center mx-auto px-4 py-20">
+      <div class="mx-auto flex w-full flex-col items-center">
+        <div
+          class="rounded-full border border-blue-300 bg-blue-500 px-4 py-1.5 text-sm text-white"
+        >
+          Core Skills
+        </div>
+        <h2 class="mt-7 text-center text-5xl font-medium text-slate-900">
+          What I Can Do
+        </h2>
+        <p
+          class="mt-3 max-w-[540px] text-center text-sm md:text-base text-slate-600"
+        >
+          I build intelligent digital solutions, from AI integration to
+          production deployment, with precision and careful attention to detail.
+        </p>
+        <div
+          class="mt-10 grid w-full max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5"
+        >
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.5 2.5H3.333a.833.833 0 0 0-.833.833v5.834c0 .46.373.833.833.833H7.5c.46 0 .833-.373.833-.833V3.333A.833.833 0 0 0 7.5 2.5m9.167 0H12.5a.833.833 0 0 0-.833.833v2.5c0 .46.373.834.833.834h4.167c.46 0 .833-.373.833-.834v-2.5a.833.833 0 0 0-.833-.833m0 7.5H12.5a.833.833 0 0 0-.833.833v5.834c0 .46.373.833.833.833h4.167c.46 0 .833-.373.833-.833v-5.834a.833.833 0 0 0-.833-.833M7.5 13.336H3.333a.833.833 0 0 0-.833.833v2.5c0 .46.373.834.833.834H7.5c.46 0 .833-.373.833-.834v-2.5a.833.833 0 0 0-.833-.833"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">AI Integration</h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Integrating AI models like GPT and Gemini into applications for
+              intelligent automation and personalized experiences.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Project
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 11.666a.832.832 0 0 1-.65-1.358l8.25-8.5a.417.417 0 0 1 .717.383l-1.6 5.017a.833.833 0 0 0 .783 1.125h5.834a.833.833 0 0 1 .65 1.358l-8.25 8.5a.416.416 0 0 1-.717-.383l1.6-5.017a.833.833 0 0 0-.783-1.125z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">
+              Full Stack Development
+            </h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Building end-to-end web applications with responsive frontends and
+              robust backends using modern technology.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Project
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.333 17.5v-1.667A3.333 3.333 0 0 0 10 12.5H5a3.333 3.333 0 0 0-3.333 3.333V17.5M13.333 2.61a3.333 3.333 0 0 1 0 6.453m5 8.438v-1.667a3.334 3.334 0 0 0-2.5-3.225M7.5 9.167a3.333 3.333 0 1 0 0-6.667 3.333 3.333 0 0 0 0 6.667"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">API Development</h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Designing and building scalable, secure REST APIs that connect
+              frontends, backends, and AI services.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Project
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.667 10.831c0 4.167-2.917 6.25-6.384 7.458a.83.83 0 0 1-.558-.008c-3.475-1.2-6.392-3.283-6.392-7.45V4.998a.833.833 0 0 1 .834-.834c1.666 0 3.75-1 5.2-2.266a.975.975 0 0 1 1.266 0c1.459 1.275 3.534 2.266 5.2 2.266a.833.833 0 0 1 .834.834z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m7.5 10.003 1.667 1.666L12.5 8.336"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">UI/UX Design</h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Designing clean, intuitive interfaces that make applications feel
+              natural and enjoyable to use.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Work
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 18.33v-4.166m2.5-7.5v-5m1.667 5a.833.833 0 0 1 .833.833v3.334a3.334 3.334 0 0 1-3.333 3.333H8.333A3.333 3.333 0 0 1 5 10.831V7.497a.833.833 0 0 1 .833-.833zm-6.667 0v-5"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">
+              Database & Backend
+            </h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Designing efficient database architecture and solid backend logic
+              to support reliable application performance.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Project
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div
+            class="flex flex-col rounded-lg border border-blue-300 bg-[#007AFF] p-6 hover:bg-blue-600 transition-colors duration-300"
+          >
+            <div
+              class="flex size-10 items-center justify-center rounded-lg border border-blue-300 bg-blue-400"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 12.503v4.166s2.525-.458 3.333-1.666c.9-1.35 0-4.167 0-4.167M3.75 13.748c-1.25 1.05-1.667 4.167-1.667 4.167s3.117-.417 4.167-1.667c.592-.7.583-1.775-.075-2.425a1.817 1.817 0 0 0-2.425-.075"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.5 9.998a18.3 18.3 0 0 1 1.667-3.292 10.73 10.73 0 0 1 9.166-5.042c0 2.267-.65 6.25-5 9.167A18.7 18.7 0 0 1 10 12.498z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.5 9.996H3.333S3.792 7.471 5 6.663c1.35-.9 4.167.042 4.167.042"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="mt-6 text-sm font-medium text-white">
+              Cloud Deployment
+            </h3>
+            <p class="mt-2 grow text-sm leading-5 text-blue-100">
+              Deploying applications to the cloud with automated CI/CD pipelines
+              so products stay ready and reliable.
+            </p>
+            <div
+              class="my-4 h-px w-full bg-gradient-to-r from-blue-400 via-blue-300 to-blue-400"
+            ></div>
+            <a
+              href="#"
+              class="flex items-center gap-1 text-sm text-white group"
+            >
+              View Project
+              <svg
+                class="transition-transform duration-300 group-hover:translate-x-1"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.333 8h9.334M8 3.336l4.667 4.667L8 12.669"
+                  stroke="#ffffff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
           </div>
         </div>
-        <div class="hero-stage">
-          <div class="orbital-card" data-parallax>
-            <img src="assets/brand/stack-precision-poster.svg" alt="Stack Precision game artwork" width="540" height="560" loading="eager">
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div
+      class="pt-20 px-4"
+      style="background: url(&quot;foot.png&quot;) center/cover no-repeat"
+    >
+      <footer
+        class="bg-white w-full max-w-[1350px] mx-auto text-black pt-8 lg:pt-12 px-4 sm:px-8 md:px-16 lg:px-28 rounded-tl-3xl rounded-tr-3xl overflow-hidden"
+      >
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-6 gap-8 md:gap-12"
+        >
+          <div class="lg:col-span-3 space-y-6">
+            <a
+              href="#"
+              class="block text-2xl font-bold tracking-tight text-black"
+              >Grizenzio</a
+            >
+            <p class="text-sm/6 text-neutral-600 max-w-96">
+              Building modern applications integrated with AI, turning complex
+              ideas into smart, seamless digital experiences.
+            </p>
+            <div class="flex gap-5 md:gap-6">
+              <!-- Twitter/X -->
+              <a
+                href="https://x.com/grizenzio"
+                class="text-neutral-600 hover:text-neutral-700"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  />
+                </svg>
+              </a>
+              <!-- Github -->
+              <a
+                href="https://github.com/grizenzio"
+                class="text-neutral-600 hover:text-neutral-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+              <!-- LinkedIn -->
+              <a
+                href="https://linkedin.com/in/grizenzio"
+                class="text-neutral-600 hover:text-neutral-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://instagram.com/grizenzio"
+                class="text-neutral-600 hover:text-neutral-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 lg:gap-28 items-start"
+          >
+            <!-- Portfolio -->
+            <div>
+              <h3 class="font-medium text-sm mb-4">Portfolio</h3>
+              <ul class="space-y-3 text-sm text-neutral-800">
+                <li>
+                  <a href="#" class="hover:text-neutral-700">Featured Work</a>
+                </li>
+                <li><a href="#" class="hover:text-neutral-700">Projects</a></li>
+                <li><a href="#" class="hover:text-neutral-700">Skills</a></li>
+              </ul>
+            </div>
+            <!-- Services -->
+            <div>
+              <h3 class="font-medium text-sm mb-4">Services</h3>
+              <ul class="space-y-3 text-sm text-neutral-800">
+                <li>
+                  <a href="#" class="hover:text-neutral-700">AI Integration</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-neutral-700">Web Development</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-neutral-700">API Development</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:text-neutral-700">UI/UX Design</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Contact -->
+            <div class="col-span-2 md:col-span-1">
+              <h3 class="font-medium text-sm mb-4">Contact</h3>
+              <ul class="space-y-3 text-sm text-neutral-800">
+                <li><a href="#" class="hover:text-neutral-700">About Me</a></li>
+                <li class="flex items-center gap-2">
+                  <a href="#" class="hover:text-neutral-700">Hire Me</a>
+                  <span
+                    class="text-[11px] px-2 py-0.5 rounded-full bg-neutral-50 border border-neutral-400 text-neutral-700"
+                    >OPEN</span
+                  >
+                </li>
+                <li><a href="#" class="hover:text-neutral-700">Email</a></li>
+                <li><a href="#" class="hover:text-neutral-700">LinkedIn</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section about" id="about">
-      <div class="section-heading" data-reveal>
-        <h2>Small Studio. High Finish.</h2>
-        <p>Orchivillando Studio builds focused games with clean mechanics, fast iteration, and production polish from day one.</p>
-      </div>
-      <div class="about-layout">
-        <article class="story-panel" data-reveal>
-          <h3>Studio Story</h3>
-          <p>We are shaping a modern indie studio from Southeast Asia: compact, technical, design-led, and relentlessly practical. Every release starts with a simple loop, then earns its visuals, feel, sound, and launch plan.</p>
-        </article>
-        <div class="value-grid">
-          <article data-reveal><span>01</span><h3>Player First</h3><p>Every screen, input, and animation must make the game easier to love.</p></article>
-          <article data-reveal><span>02</span><h3>Polish Early</h3><p>Feel is not saved for the end. It guides what stays and what gets cut.</p></article>
-          <article data-reveal><span>03</span><h3>Automation</h3><p>AI-assisted workflows, testing, and publishing keep the studio fast.</p></article>
+        <div
+          class="max-w-7xl mx-auto mt-12 pt-4 border-t border-neutral-300 flex justify-between items-center"
+        >
+          <p class="text-neutral-600 text-sm">© 2025 Grizenzio Orchivillando</p>
+          <p class="text-sm text-neutral-600">All rights reserved.</p>
         </div>
-      </div>
-    </section>
-
-    <section class="section games" id="games">
-      <div class="section-heading wide" data-reveal>
-        <h2>Games</h2>
-        <p>Current releases and experiments from the Orchivillando pipeline.</p>
-      </div>
-      <div class="game-grid">
-        <article class="game-card featured" data-reveal>
-          <img src="assets/brand/stack-precision-poster.svg" alt="Stack Precision preview" width="480" height="360" loading="lazy">
-          <div>
-            <p class="status live">Submitted to CrazyGames Basic Launch</p>
-            <h3>Stack Precision</h3>
-            <p>A crisp precision-stacking browser game built for quick sessions, satisfying timing, and clean replay value.</p>
-            <a class="text-link" href="#contact">Launch details</a>
-          </div>
-        </article>
-        <article class="game-card placeholder" data-reveal><div class="placeholder-art"></div><p class="status">In concept</p><h3>Future Game 02</h3><p>Prototype slot reserved for the next polished arcade experiment.</p></article>
-        <article class="game-card placeholder" data-reveal><div class="placeholder-art alt"></div><p class="status">Research</p><h3>AI Tooling Lab</h3><p>Internal tools for faster design, QA, content, and publishing loops.</p></article>
-      </div>
-    </section>
-
-    <section class="section technology" id="technology">
-      <div class="section-heading" data-reveal><h2>Technology</h2><p>A practical stack for fast prototypes, web launches, and repeatable publishing.</p></div>
-      <div class="tech-orbit" data-reveal>
-        <div class="tech-core">Orchivillando<br>Pipeline</div>
-        <ul>
-          <li>Godot</li><li>HTML5</li><li>CrazyGames SDK</li><li>GitHub</li><li>AI-assisted Development</li><li>Automation Pipeline</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section process" id="process">
-      <div class="section-heading wide" data-reveal><h2>Development Process</h2><p>Simple stages, visible quality gates, and fast feedback.</p></div>
-      <ol class="process-flow">
-        <li data-reveal><span>Research</span></li><li data-reveal><span>Prototype</span></li><li data-reveal><span>Production</span></li><li data-reveal><span>QA</span></li><li data-reveal><span>Release</span></li><li data-reveal><span>Analytics</span></li><li data-reveal><span>Iteration</span></li>
-      </ol>
-    </section>
-
-    <section class="section stats" aria-label="Studio stats">
-      <div class="stat-grid">
-        <div class="stat" data-counter="1" data-suffix="+"><strong>0</strong><span>Games Created</span></div>
-        <div class="stat" data-counter="0"><strong>0</strong><span>Games Released</span></div>
-        <div class="stat" data-counter="0"><strong>0</strong><span>Players</span></div>
-        <div class="stat" data-counter="240" data-suffix="+"><strong>0</strong><span>Hours of Development</span></div>
-        <div class="stat" data-counter="100" data-suffix="+"><strong>0</strong><span>Commits</span></div>
-        <div class="stat" data-counter="999" data-suffix="+"><strong>0</strong><span>Coffee Consumed</span></div>
-      </div>
-    </section>
-
-    <section class="section vision" id="vision">
-      <div class="vision-copy" data-reveal><h2>Our Vision</h2><p>We are building one of the best AI-assisted indie game studios in Southeast Asia: a studio where taste, tooling, and execution compound into games people return to.</p></div>
-      <div class="timeline" id="timeline" data-reveal>
-        <div><time>2026</time><span>Stack Precision launch path</span></div>
-        <div><time>Next</time><span>Release cadence and browser-game portfolio</span></div>
-        <div><time>Future</time><span>Mobile experiences and AI-powered studio tools</span></div>
-      </div>
-    </section>
-
-    <section class="section editorial" id="blog">
-      <div class="section-heading wide" data-reveal><h2>Blog</h2><p>Launch notes, production breakdowns, and studio updates will live here.</p></div>
-      <article class="notice" data-reveal><h3>Coming Soon</h3><p>Postmortems, devlogs, technical notes, and behind-the-scenes production stories.</p></article>
-    </section>
-
-    <section class="section press" id="press">
-      <div class="section-heading wide" data-reveal><h2>Press Kit</h2><p>Downloadable starter assets for media, listings, stores, and partners.</p></div>
-      <div class="press-grid">
-        <a href="assets/press-kit/logos/orchivillando-logo-light.svg" download data-reveal>Logos</a>
-        <a href="assets/press-kit/screenshots/stack-precision-placeholder.svg" download data-reveal>Screenshots</a>
-        <a href="assets/press-kit/icons/app-icon.svg" download data-reveal>Icons</a>
-        <a href="docs/BrandGuide.md" download data-reveal>Brand Guide</a>
-        <a href="mailto:hello@orchivillando.studio" data-reveal>Media Contact</a>
-      </div>
-    </section>
-
-    <section class="section careers" id="careers">
-      <div class="section-heading" data-reveal><h2>Careers</h2><p>Open roles are not active yet. Future collaborators: game designers, web engineers, technical artists, QA, and publishing partners.</p></div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="contact-panel" data-reveal>
-        <h2>Contact</h2>
-        <p>For publishing, press, partnership, or game platform inquiries.</p>
-        <div class="contact-links">
-          <a href="https://github.com/orchivillando" rel="noopener">GitHub</a>
-          <a href="mailto:hello@orchivillando.studio">Email</a>
-          <a href="#" aria-disabled="true">CrazyGames profile placeholder</a>
-          <a href="#" aria-disabled="true">Social placeholders</a>
+        <div class="relative">
+          <div
+            class="absolute inset-x-0 bottom-0 mx-auto w-full max-w-3xl h-full max-h-64 bg-blue-100 rounded-full blur-[100px] pointer-events-none"
+          ></div>
+          <h2
+            class="text-center font-extrabold leading-[0.7] text-transparent text-[clamp(3rem,15vw,15rem)] [-webkit-text-stroke:1px_#D4D4D4] mt-6"
+          >
+            Grizenzio
+          </h2>
         </div>
-      </div>
-    </section>
-  </main>
+      </footer>
+    </div>
 
-  <footer class="footer">
-    <img src="assets/brand/logo-dark.svg" alt="Orchivillando Studio" width="190" height="48" loading="lazy">
-    <p>Independent game studio. Built in Southeast Asia. Designed for players everywhere.</p>
-    <nav aria-label="Footer navigation">
-      <a href="#games">Games</a><a href="#press">Press Kit</a><a href="#contact">Contact</a><a href="https://github.com/orchivillando" rel="noopener">GitHub</a>
-    </nav>
-  </footer>
+    <script>
+      const openMenuBtn = document.getElementById("open-menu");
+      const closeMenuBtn = document.getElementById("close-menu");
+      const menu = document.getElementById("menu");
+      const menuItems = menu.querySelectorAll("a");
 
-  <script src="assets/js/main.js" defer></script>
-</body>
+      function openMenu() {
+        menu.classList.remove("max-md:w-0");
+        menu.classList.add("max-md:w-full");
+      }
+
+      function closeMenu() {
+        menu.classList.remove("max-md:w-full");
+        menu.classList.add("max-md:w-0");
+      }
+
+      openMenuBtn.addEventListener("click", openMenu);
+      closeMenuBtn.addEventListener("click", closeMenu);
+      menuItems.forEach((item) => {
+        item.addEventListener("click", closeMenu);
+      });
+    </script>
+  </body>
 </html>
